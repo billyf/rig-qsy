@@ -1,0 +1,36 @@
+{
+  "name": "rig-qsy",
+  "version": "1.0",
+  "description": "Makes frequencies clickable for calling rigctl",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "content_scripts": [
+    {
+      "matches": [
+      	"*://sotawatch.sota.org.uk/*",
+      	"*://pota.app/*",
+      	"*://dxcluster.ha8tks.hu/*",
+        "*://rbn.telegraphy.de/*",
+        "*://beta.reversebeacon.net/*",
+        "*://reversebeacon.net/*",
+        "*://dxsummit.fi/*"
+      ],
+      "js": ["jquery-3.5.1.min.js", "sites.js", "contentScript.js"]
+    }
+  ],
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "radio-fm.png",
+      "32": "radio-fm.png",
+      "48": "radio-fm.png",
+      "128": "radio-fm.png"
+    }
+  },
+  "icons": {
+    "16": "radio-fm.png",
+    "32": "radio-fm.png",
+    "48": "radio-fm.png",
+    "128": "radio-fm.png"
+  },
+  "manifest_version": 2
+}
